@@ -1,0 +1,435 @@
+/* 定义jd主题色变量 */
+/* 1. 放样式初始化 */
+* {
+  margin: 0px;
+  padding: 0px;
+  /* 移动端都会设置盒模型为border-box */
+  box-sizing: border-box;
+  /* 去掉内边框 */
+  outline: 0;
+  /* 去除a标签的按住高亮背景色 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input,
+select {
+  /* 消除输入框和按钮的原生外观，在iOS上加上这个属性才能给按钮和输入框自定义样式 */
+  /* 另外，select加上这个属性后，select的高度就可以改变了 */
+  -webkit-appearance: none;
+}
+/* 去掉小圆点 */
+li {
+  list-style: none;
+}
+img {
+  /* 去除图片3px间隙 */
+  vertical-align: middle;
+}
+a {
+  background: transparent;
+  text-decoration: none;
+  /* 设置a标签的高亮背景色 手指按住的时候会出现 */
+  -webkit-tap-highlight-color: transparent;
+  color: #666;
+}
+/* 样式初始化 */
+html {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%;
+}
+body {
+  /*  1rem == 100px
+   100px == 1rem
+   200px == 2rem
+   14px == 0.14rem
+   要把之前px转成rem 因为参照375写代码的  375根元素100px
+   把px / 100倍  === px对应的rem*/
+  margin: 0;
+  /* 默认网页字体都使用了14px */
+  font-size: 0.14rem;
+  line-height: 1.5;
+  color: #333333;
+  background-color: white;
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+a:active {
+  outline: 0;
+}
+a:active {
+  color: #006699;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+  border: 0;
+  outline: 0;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+html,
+button,
+input,
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+form,
+blockquote {
+  margin: 0;
+}
+ul,
+ol,
+li,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none outside none;
+}
+h1,
+h2,
+h3 {
+  line-height: 2;
+  font-weight: normal;
+}
+h1 {
+  font-size: 0.18rem;
+}
+h2 {
+  font-size: 0.16rem;
+}
+h3 {
+  font-size: 0.14rem;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #cccccc;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #cccccc;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #cccccc;
+}
+/* 2. 放所有页面都会用到公共类 */
+/* 边框的公共类名 */
+.bt {
+  border-top: 1px solid #ccc;
+}
+.bb {
+  border-bottom: 1px solid #ccc;
+}
+.bl {
+  border-left: 1px solid #ccc;
+}
+.br {
+  border-right: 1px solid #ccc;
+}
+#header {
+  /* 使用伸缩布局 实现左右2边固定中间自适应 */
+  display: flex;
+  height: 0.22rem;
+  line-height: 0.22rem;
+  text-align: center;
+  border: 1px solid #dddddd;
+}
+#header > .location {
+  color: #d3079e;
+  width: 0.6rem;
+  font-size: 0.07rem;
+}
+#header .title {
+  flex: 1;
+  font-size: 0.09rem;
+}
+#header .icon-my {
+  padding-right: 0.06rem;
+  line-height: 0.22rem;
+  display: bolck;
+  text-align: center;
+}
+#header .icon-my img {
+  width: 0.12rem;
+  height: 0.12rem;
+}
+#slide {
+  /* 3. 设置样式 */
+  /* 覆盖小圆点的样式 */
+}
+#slide .swi {
+  width: 1000vw;
+  display: flex;
+  transform: translateX(-100vw);
+}
+#slide li {
+  width: 100vw;
+}
+#slide img {
+  width: 100vw;
+}
+#slide .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+/*分类区域*/
+#category ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#category ul li {
+  width: 33.33vw;
+  padding: 0.05rem;
+}
+#category ul li a img {
+  width: 100%;
+}
+/*导航区域*/
+#nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#nav ul li {
+  width: 25vw;
+}
+#nav ul li a {
+  width: 100%;
+}
+#nav ul li a img {
+  width: 100%;
+}
+/*亲子区域*/
+#family .family-content {
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+#family .family-content .product {
+  display: flex;
+}
+#family .family-content .product .product-left {
+  width: 50vw;
+}
+#family .family-content .product .product-left a {
+  display: block;
+}
+#family .family-content .product .product-left a img {
+  width: 100%;
+}
+#family .family-content .product .product-right {
+  width: 50vw;
+}
+#family .family-content .product .product-right a {
+  display: block;
+}
+#family .family-content .product .product-right a img {
+  /* 因为父元素a有边框 内容变小了和屏幕50%不一样 不能使用vw单位 使用100% */
+  width: 100%;
+}
+/*活动区域*/
+#activity .activity-content a {
+  width: 100vw;
+}
+#activity .activity-content a img {
+  width: 100%;
+}
+/*广告区域*/
+#banner .banner-title {
+  display: flex;
+}
+#banner .banner-title a {
+  flex: 1;
+  text-align: center;
+}
+#banner .banner-content ul li {
+  width: 100vw;
+  margin-top: 0.1rem;
+  border-bottom: 1px solid #ccc;
+}
+#banner .banner-content ul li a img {
+  width: 100%;
+}
+#banner .banner-more {
+  text-align: center;
+  width: 100vw;
+  padding: 0.15rem 0;
+}
+/*底部*/
+#footer {
+  position: relative;
+  background-color: #d3079e;
+}
+#footer a {
+  padding: 0.1rem;
+  font-size: 0.08rem;
+  color: #fff;
+}
+#footer a:last-child {
+  position: absolute;
+  padding: 0 ;
+  right: 0;
+}
